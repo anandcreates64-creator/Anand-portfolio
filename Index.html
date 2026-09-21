@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anand Portfolio</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  background: #0a0a0a; color: white; font-family: sans-serif;
+  margin: 0; padding: 20px;
+  display: flex; justify-content: center;
+}
+.card {
+  background: #151515; padding: 25px; border-radius: 20px;
+  text-align: center; width: 100%; max-width: 400px;
+  border: 1px solid rgba(0,255,136,0.2);
+  box-shadow: 0 10px 30px rgba(0,255,136,0.1);
+}
+h1 { color: #00ff88; margin: 0; animation: glow 3s infinite; }
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #00ff88; }
+  50% { text-shadow: 0 0 20px #00ff88; }
+}
+.skills { color: #aaa; margin: 10px 0 20px 0; }
+img { 
+  border-radius: 50%; 
+  width: 150px; height: 150px; 
+  object-fit: cover;
+  margin: 15px 0; 
+  transition: 0.3s; 
+}
+img:hover { transform: scale(1.05); }
+.btn {
+  display: block; width: 100%; padding: 12px; margin: 10px 0;
+  background: #00ff88; color: black; border: none;
+  border-radius: 30px; font-weight: bold; font-size: 16px;
+  text-decoration: none; cursor: pointer;
+}
+.btn:hover {
+  background: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ff88;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+input, textarea {
+  width: 100%; padding: 12px; margin: 8px 0;
+  border-radius: 10px; border: none; outline: none;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Anand</h1>
+  <div class="skills">Skills: Python, HTML, CSS</div>
+  
+  <a class="btn" href="#">My Business Profile</a>
+  
+  <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500" alt="profile">
+  
+  <a class="btn" href="#">My Works</a>
+  <a class="btn" href="#">Contact</a>
+
+  <form name="contact" method="POST" data-netlify="true" style="margin-top:20px;">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+</div>
+</body>
+</html>
